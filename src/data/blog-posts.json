@@ -1,12 +1,6 @@
 {
   "zh-CN": [
     {
-      "title": "Codex 加载历史对话很慢：清理日志库并保留会话历史",
-      "url": "https://blog.js.gripe/zh-CN/posts/codex-history-load-slow-maintenance/",
-      "date": "Tue, 19 May 2026 00:00:00 GMT",
-      "excerpt": "一次 Codex 历史对话打开过久的排查记录：定位膨胀的 logs_2.sqlite，备份、清理低价值日志、压缩数据库，并提供可复用维护脚本。"
-    },
-    {
       "title": "北京握手，霍尔木兹仍在燃烧：上周世界发生了什么",
       "url": "https://blog.js.gripe/zh-CN/posts/weekly-world-news-2026-05-11/",
       "date": "Mon, 18 May 2026 00:00:00 GMT",
@@ -29,15 +23,15 @@
       "url": "https://blog.js.gripe/zh-CN/posts/vscode-remote-codex-dev-efficiency/",
       "date": "Sun, 10 May 2026 00:00:00 GMT",
       "excerpt": "通过 VS Code Remote SSH、Codex IDE 扩展和 Codex CLI，把远程主机上的真实项目环境变成可协作、可构建、可审查的开发工作台。"
+    },
+    {
+      "title": "OpenWrt QModem 下 RM502Q-AE 无法接收短信的排障与恢复：IMS、5G SA 与短信承载配置",
+      "url": "https://blog.js.gripe/zh-CN/posts/rm502q-ae-openwrt-qmodem-sms-ims-fix/",
+      "date": "Wed, 29 Apr 2026 00:00:00 GMT",
+      "excerpt": "一次真实排障记录：QModem 页面收不到短信，最终定位为中国移动 NR5G SA 下 IMS 未开启；开启 IMS 并重启 RM502Q-AE 后，短信恢复接收。"
     }
   ],
   "zh-TW": [
-    {
-      "title": "Codex 載入歷史對話很慢：清理日誌庫並保留會話歷史",
-      "url": "https://blog.js.gripe/zh-TW/posts/codex-history-load-slow-maintenance/",
-      "date": "Tue, 19 May 2026 00:00:00 GMT",
-      "excerpt": "一次 Codex 歷史對話開啟過久的排查記錄：定位膨脹的 logs_2.sqlite，備份、清理低價值日誌、壓縮資料庫，並提供可重用維護腳本。"
-    },
     {
       "title": "北京握手，荷莫茲仍在燃燒：上週世界發生了什麼",
       "url": "https://blog.js.gripe/zh-TW/posts/weekly-world-news-2026-05-11/",
@@ -61,15 +55,15 @@
       "url": "https://blog.js.gripe/zh-TW/posts/vscode-remote-codex-dev-efficiency/",
       "date": "Sun, 10 May 2026 00:00:00 GMT",
       "excerpt": "透過 VS Code Remote SSH、Codex IDE 擴充套件與 Codex CLI，把遠端主機上的真實專案環境變成可協作、可建置、可審查的開發工作台。"
+    },
+    {
+      "title": "OpenWrt QModem 下 RM502Q-AE 無法接收簡訊的排障與恢復：IMS、5G SA 與簡訊承載設定",
+      "url": "https://blog.js.gripe/zh-TW/posts/rm502q-ae-openwrt-qmodem-sms-ims-fix/",
+      "date": "Wed, 29 Apr 2026 00:00:00 GMT",
+      "excerpt": "一次真實排障記錄：QModem 頁面收不到簡訊，最後定位為中國移動 NR5G SA 下 IMS 未開啟；開啟 IMS 並重啟 RM502Q-AE 後，簡訊恢復接收。"
     }
   ],
   "en": [
-    {
-      "title": "When Codex History Loads Slowly: Trim the Log Database Without Losing Conversations",
-      "url": "https://blog.js.gripe/en/posts/codex-history-load-slow-maintenance/",
-      "date": "Tue, 19 May 2026 00:00:00 GMT",
-      "excerpt": "A practical Codex maintenance note: find an oversized logs_2.sqlite, back it up, remove low-value logs, vacuum the database, and reuse the included ..."
-    },
     {
       "title": "The Beijing Handshake, the Gulf Still Burning: What Happened Last Week",
       "url": "https://blog.js.gripe/en/posts/weekly-world-news-2026-05-11/",
@@ -93,6 +87,12 @@
       "url": "https://blog.js.gripe/en/posts/vscode-remote-ssh-connect-host/",
       "date": "Sun, 10 May 2026 00:00:00 GMT",
       "excerpt": "A practical Windows workflow for connecting VS Code to a remote Linux host over SSH and editing, running, and troubleshooting a project directly on ..."
+    },
+    {
+      "title": "Fixing SMS Reception on RM502Q-AE with OpenWrt QModem: IMS, 5G SA, and SMS Bearer Settings",
+      "url": "https://blog.js.gripe/en/posts/rm502q-ae-openwrt-qmodem-sms-ims-fix/",
+      "date": "Wed, 29 Apr 2026 00:00:00 GMT",
+      "excerpt": "A real troubleshooting note: QModem showed no incoming SMS, and the root cause was IMS being disabled while the RM502Q-AE was registered on China Mo..."
     }
   ]
 }
