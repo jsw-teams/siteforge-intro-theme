@@ -97,7 +97,7 @@ export const messages: Record<Lang, Messages> = {
     privacy: {
       points: [
         '默认不主动收集个人信息。',
-        '不使用第三方追踪脚本。',
+        '可能使用 Cloudflare Web Analytics 等隐私友好的分析插件了解页面访问情况；在需要同意的地区，会先征得同意后再加载。',
         '访问日志与安全日志可能由基础设施产生。',
         '隐私相关请求可通过联系方式页面提出。'
       ],
@@ -187,7 +187,7 @@ export const messages: Record<Lang, Messages> = {
     privacy: {
       points: [
         '預設不主動收集個人資訊。',
-        '不使用第三方追蹤腳本。',
+        '可能使用 Cloudflare Web Analytics 等隱私友善的分析插件了解頁面訪問情況；在需要同意的地區，會先徵得同意後再載入。',
         '訪問日誌與安全日誌可能由基礎設施產生。',
         '隱私相關請求可透過聯絡方式頁面提出。'
       ],
@@ -277,7 +277,7 @@ export const messages: Record<Lang, Messages> = {
     privacy: {
       points: [
         'This site does not actively collect personal information by default.',
-        'No third-party tracking scripts are used.',
+        'Privacy-minded analytics plugins such as Cloudflare Web Analytics may be used to understand page visits; in regions where consent is appropriate, they load only after consent.',
         'Access logs and security logs may be produced by infrastructure.',
         'Privacy requests can be sent through the contact page.'
       ],
