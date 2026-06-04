@@ -1,0 +1,11 @@
+{
+  "issuer": "https://js.gripe/",
+  "authorization_endpoint": "https://js.gripe/auth.md#authentication",
+  "token_endpoint": "https://js.gripe/auth.md#authentication",
+  "jwks_uri": "https://js.gripe/.well-known/jwks.json",
+  "grant_types_supported": [],
+  "response_types_supported": [],
+  "scopes_supported": ["public:read"],
+  "subject_types_supported": [],
+  "id_token_signing_alg_values_supported": []
+}

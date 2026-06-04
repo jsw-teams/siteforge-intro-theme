@@ -1,14 +1,16 @@
 import fs from 'node:fs/promises';
+import fsSync from 'node:fs';
 import path from 'node:path';
 
 const languages = ['zh-CN', 'zh-TW', 'en'];
 const blogBaseUrl = 'https://blog.js.gripe/';
-const localBlogPublicDir = path.resolve(process.env.BLOG_PUBLIC_DIR ?? '../myblog/public');
+const localBlogPublicDir = path.resolve(process.env.BLOG_PUBLIC_DIR ?? findDefaultBlogPublicDir());
 const outputPath = path.resolve('src/data/blog-posts.json');
 const maxPosts = 5;
 const timeoutMs = 8000;
 
-const next = Object.fromEntries(languages.map((lang) => [lang, []]));
+const previous = await readPreviousPosts();
+const next = Object.fromEntries(languages.map((lang) => [lang, previous[lang] ?? []]));
 
 for (const lang of languages) {
   const feedUrl = new URL(`${lang}/feed.xml`, blogBaseUrl).toString();
@@ -19,7 +21,7 @@ for (const lang of languages) {
     next[lang] = parseFeed(xml, feedUrl).slice(0, maxPosts);
     console.log(`[blog-feed] ${lang}: synced ${next[lang].length} post(s)`);
   } catch (error) {
-    console.warn(`[blog-feed] ${lang}: synced 0 post(s); ${formatError(error)}`);
+    console.warn(`[blog-feed] ${lang}: kept ${next[lang].length} existing post(s); ${formatError(error)}`);
   }
 }
 
@@ -27,6 +29,35 @@ await fs.writeFile(outputPath, `${JSON.stringify(next, null, 2)}\n`, 'utf8');
 
 async function readLocalText(filePath) {
   return fs.readFile(filePath, 'utf8');
+}
+
+async function readPreviousPosts() {
+  try {
+    const parsed = JSON.parse(await fs.readFile(outputPath, 'utf8'));
+    return Object.fromEntries(languages.map((lang) => [lang, Array.isArray(parsed?.[lang]) ? parsed[lang] : []]));
+  } catch {
+    return Object.fromEntries(languages.map((lang) => [lang, []]));
+  }
+}
+
+function findDefaultBlogPublicDir() {
+  const candidates = [
+    '/opt/myblog/public',
+    '../myblog/public'
+  ];
+
+  for (const candidate of candidates) {
+    try {
+      const resolved = path.resolve(candidate);
+      if (resolved && fsSync.existsSync(resolved) && fsSync.statSync(resolved).isDirectory()) {
+        return candidate;
+      }
+    } catch {
+      continue;
+    }
+  }
+
+  return '../myblog/public';
 }
 
 async function fetchText(url) {

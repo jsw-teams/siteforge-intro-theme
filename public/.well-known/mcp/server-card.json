@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "serverInfo": {
+    "name": "JS.Gripe",
+    "version": "1.0.0"
+  },
+  "transports": [
+    {
+      "type": "webmcp",
+      "endpoint": "https://js.gripe/"
+    }
+  ],
+  "capabilities": {
+    "tools": [
+      {
+        "name": "list_site_sections",
+        "description": "List public JS.Gripe sections and canonical URLs."
+      },
+      {
+        "name": "list_discovery_resources",
+        "description": "List machine-readable discovery resources published by the site."
+      }
+    ],
+    "resources": [
+      "https://js.gripe/llms.txt",
+      "https://js.gripe/llms-full.txt",
+      "https://js.gripe/.well-known/api-catalog"
+    ]
+  },
+  "auth": {
+    "type": "none",
+    "metadata": "https://js.gripe/auth.md"
+  }
+}

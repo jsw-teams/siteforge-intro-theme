@@ -1,6 +1,12 @@
 {
   "zh-CN": [
     {
+      "title": "一觉醒来，Windows Codex Desktop 的 Browser 和 Computer Use 都不可用了：直接让 Codex 接手修",
+      "url": "https://blog.js.gripe/zh-CN/posts/codex-desktop-browser-computer-use-sandbox-recovery/",
+      "date": "Wed, 03 Jun 2026 00:00:00 GMT",
+      "excerpt": "电脑休眠后 Codex Desktop Browser、Computer Use 和智能沙盒不可用时，把现场交给 Codex 接手排障和修复。"
+    },
+    {
       "title": "一周国际新闻：伊朗风险、香格里拉对话与台湾 AI 供应链",
       "url": "https://blog.js.gripe/zh-CN/posts/weekly-world-news-2026-05-25/",
       "date": "Sun, 31 May 2026 00:00:00 GMT",
@@ -23,15 +29,15 @@
       "url": "https://blog.js.gripe/zh-CN/posts/codex-history-load-slow-maintenance/",
       "date": "Tue, 19 May 2026 00:00:00 GMT",
       "excerpt": "Codex 历史对话加载慢时，不必一上来就手动翻数据库。更简单的做法是新开一个对话，让 Codex 判断原因并给出修复步骤。"
-    },
-    {
-      "title": "北京握手，霍尔木兹仍在燃烧：上周世界发生了什么",
-      "url": "https://blog.js.gripe/zh-CN/posts/weekly-world-news-2026-05-11/",
-      "date": "Mon, 18 May 2026 00:00:00 GMT",
-      "excerpt": "台北时间 2026-05-11 至 2026-05-17 国际新闻视频制作版：中美北京会晤、台湾议题、中东能源风险、俄乌无人机战、三星罢工风险、公共健康与文化新闻。"
     }
   ],
   "zh-TW": [
+    {
+      "title": "一覺醒來，Windows Codex Desktop 的 Browser 和 Computer Use 都不可用了：直接讓 Codex 接手修",
+      "url": "https://blog.js.gripe/zh-TW/posts/codex-desktop-browser-computer-use-sandbox-recovery/",
+      "date": "Wed, 03 Jun 2026 00:00:00 GMT",
+      "excerpt": "電腦休眠後 Codex Desktop Browser、Computer Use 和智慧沙盒不可用時，把現場交給 Codex 接手排障和修復。"
+    },
     {
       "title": "一週國際新聞：伊朗風險、香格里拉對話與台灣 AI 供應鏈",
       "url": "https://blog.js.gripe/zh-TW/posts/weekly-world-news-2026-05-25/",
@@ -55,15 +61,15 @@
       "url": "https://blog.js.gripe/zh-TW/posts/codex-history-load-slow-maintenance/",
       "date": "Tue, 19 May 2026 00:00:00 GMT",
       "excerpt": "Codex 歷史對話載入慢時，不必一開始就手動翻資料庫。更簡單的做法是新開一個對話，讓 Codex 判斷原因並幫你清理歷史記錄。"
-    },
-    {
-      "title": "北京握手，荷莫茲仍在燃燒：上週世界發生了什麼",
-      "url": "https://blog.js.gripe/zh-TW/posts/weekly-world-news-2026-05-11/",
-      "date": "Mon, 18 May 2026 00:00:00 GMT",
-      "excerpt": "台北時間 2026-05-11 至 2026-05-17 國際新聞影片製作版：中美北京會晤、台灣議題、中東能源風險、俄烏無人機戰、三星罷工風險、公共健康與文化新聞。"
     }
   ],
   "en": [
+    {
+      "title": "When Windows Codex Desktop Wakes Up Without Browser or Computer Use: Let Codex Take Over the Repair",
+      "url": "https://blog.js.gripe/en/posts/codex-desktop-browser-computer-use-sandbox-recovery/",
+      "date": "Wed, 03 Jun 2026 00:00:00 GMT",
+      "excerpt": "A recovery note for Codex Desktop after sleep breaks Browser, Computer Use, or the sandbox helper."
+    },
     {
       "title": "From Building My Own Search Engine to Giving Up",
       "url": "https://blog.js.gripe/en/posts/searchme-search-engine-from-start-to-give-up/",
@@ -87,12 +93,6 @@
       "url": "https://blog.js.gripe/en/posts/codex-history-load-slow-maintenance/",
       "date": "Tue, 19 May 2026 00:00:00 GMT",
       "excerpt": "When Codex history feels slow, do not start with database surgery. Open a new Codex chat, ask it to inspect safely, and let it suggest the fix."
-    },
-    {
-      "title": "The Beijing Handshake, the Gulf Still Burning: What Happened Last Week",
-      "url": "https://blog.js.gripe/en/posts/weekly-world-news-2026-05-11/",
-      "date": "Mon, 18 May 2026 00:00:00 GMT",
-      "excerpt": "A video-production weekly brief for 2026-05-11 to 2026-05-17 Asia/Taipei time: US-China talks in Beijing, Taiwan, Gulf energy risk, drone warfare in..."
     }
   ]
 }

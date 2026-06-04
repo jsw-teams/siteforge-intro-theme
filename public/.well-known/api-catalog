@@ -1,0 +1,33 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://js.gripe/",
+      "service-desc": [
+        {
+          "href": "https://js.gripe/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1",
+          "title": "JS.Gripe public resource description"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://js.gripe/llms.txt",
+          "type": "text/plain",
+          "title": "Public content guide for language models"
+        },
+        {
+          "href": "https://js.gripe/auth.md",
+          "type": "text/markdown",
+          "title": "Agent authentication and registration policy"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://js.gripe/.well-known/status.json",
+          "type": "application/json",
+          "title": "Public site status"
+        }
+      ]
+    }
+  ]
+}
