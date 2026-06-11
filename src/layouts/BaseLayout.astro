@@ -5,6 +5,7 @@ import Seo from '../components/Seo.astro';
 import type { Lang, PageKey } from '../i18n/config';
 import { messages } from '../i18n/messages';
 import type { SeoOverrides } from '../lib/seo';
+import { withBase } from '../lib/i18n';
 import '../styles/global.css';
 
 type Props = {
@@ -32,6 +33,6 @@ const t = messages[lang];
       </main>
       <Footer lang={lang} page={page} />
     </div>
-    <script src="/assets/agent-discovery.js" defer></script>
+    <script src={withBase('/assets/agent-discovery.js')} defer></script>
   </body>
 </html>

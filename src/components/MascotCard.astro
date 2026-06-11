@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+import { withBase } from '../lib/i18n';
 
 type Props = {
   alt: string;
@@ -10,5 +11,5 @@ type Props = {
 const { alt, image = site.mascot, compact = false } = Astro.props;
 ---
 <aside class:list={['mascot-card', { compact }]}>
-  <img class="mascot-sheet" src={image} alt={alt} loading={compact ? 'lazy' : 'eager'} />
+  <img class="mascot-sheet" src={withBase(image)} alt={alt} loading={compact ? 'lazy' : 'eager'} />
 </aside>

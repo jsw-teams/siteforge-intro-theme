@@ -2,7 +2,7 @@
 import { site } from '../data/site';
 import { messages } from '../i18n/messages';
 import type { Lang, PageKey } from '../i18n/config';
-import { getMarkdownPath } from '../lib/i18n';
+import { getMarkdownPath, withBase } from '../lib/i18n';
 import { absoluteUrl, getBreadcrumbs, getSeo, type SeoOverrides } from '../lib/seo';
 
 type Props = {
@@ -55,8 +55,8 @@ const structuredData = [
 <meta name="description" content={description} />
 <meta name="robots" content={robots} />
 <link rel="canonical" href={canonical} />
-<link rel="icon" type="image/png" href={site.favicon} />
-<link rel="apple-touch-icon" href={site.appleTouchIcon} />
+<link rel="icon" type="image/png" href={withBase(site.favicon)} />
+<link rel="apple-touch-icon" href={withBase(site.appleTouchIcon)} />
 {includeMarkdownAlternate && <link rel="alternate" type="text/markdown" href={getMarkdownPath(lang, page)} />}
 {includeAlternates && seo.alternates.map((alternate) => (
   <link rel="alternate" hreflang={alternate.lang} href={alternate.href} />

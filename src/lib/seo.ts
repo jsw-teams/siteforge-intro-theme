@@ -1,7 +1,7 @@
 import { site } from '../data/site';
 import { languages, type Lang, type PageKey } from '../i18n/config';
 import { messages } from '../i18n/messages';
-import { getPagePath } from './i18n';
+import { getPagePath, withoutBase } from './i18n';
 
 export type SeoOverrides = {
   title?: string;
@@ -15,7 +15,7 @@ export type SeoOverrides = {
 };
 
 export function absoluteUrl(path: string): string {
-  return new URL(path, site.url).toString();
+  return new URL(withoutBase(path), site.url).toString();
 }
 
 export function getSeo(lang: Lang, page: PageKey) {
