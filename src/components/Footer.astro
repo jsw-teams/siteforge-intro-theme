@@ -14,8 +14,8 @@ const { lang, page } = Astro.props;
 const t = messages[lang];
 ---
 <footer class="site-footer">
-  <p>&copy; {new Date().getUTCFullYear()} {site.shortName}</p>
-  <nav aria-label={t.pages.privacy.heading}>
+  <p class="footer-brand">&copy; {new Date().getUTCFullYear()} {site.shortName}</p>
+  <nav class="footer-links" aria-label={t.pages.privacy.heading}>
     {footerItems.map((item) => (
       <a href={getPagePath(lang, item)} aria-current={page === item ? 'page' : undefined}>
         {t.pages[item].heading}

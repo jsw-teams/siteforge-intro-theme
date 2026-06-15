@@ -124,7 +124,7 @@ img {
 }
 
 .site-nav,
-.site-footer nav,
+.footer-links,
 .language-links ul {
   display: flex;
   align-items: center;
@@ -135,7 +135,7 @@ img {
 }
 
 .site-nav a,
-.site-footer a,
+.footer-links a,
 .language-links a,
 .button-link {
   display: inline-flex;
@@ -430,10 +430,12 @@ h3 {
   margin-top: auto;
   border-top: 1px solid rgba(47, 128, 104, 0.16);
   color: var(--muted);
+  flex-wrap: wrap;
 }
 
-.site-footer p {
+.footer-brand {
   margin: 0;
+  font-weight: 700;
 }
 
 @media (prefers-reduced-motion: no-preference) {
