@@ -33,4 +33,4 @@ How JS.Gripe handles visits, required services, optional analytics plugins, and 
 - Privacy requests, access/correction/deletion requests, or consent withdrawal questions can be sent through the contact page.
 - Please do not send passwords, keys, tokens, identity documents, payment data, or other sensitive information through public pages or ordinary email.
 
-Contact: https://js.gripe/en/contact/
+Contact: https://www.js.gripe/en/contact/

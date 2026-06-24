@@ -1,98 +1,98 @@
 {
   "zh-CN": [
     {
-      "title": "一觉醒来，Windows Codex Desktop 的 Browser 和 Computer Use 都不可用了：直接让 Codex 接手修",
-      "url": "https://blog.js.gripe/zh-CN/posts/codex-desktop-browser-computer-use-sandbox-recovery/",
-      "date": "Wed, 03 Jun 2026 00:00:00 GMT",
-      "excerpt": "电脑休眠后 Codex Desktop Browser、Computer Use 和智能沙盒不可用时，把现场交给 Codex 接手排障和修复。"
+      "title": "AI 税、失业与再培训：当模型开始重写工作的账本",
+      "url": "https://blog.js.gripe/zh-CN/posts/ai-tax-unemployment-policy/",
+      "date": "Mon, 22 Jun 2026 00:00:00 GMT",
+      "excerpt": "基于 GPT 深度调查分析、Gemini 深度搜索、均姐分析稿与年导分析稿，梳理各国如何面对 AI 替代工作、AI 税、失业保险、再培训、工资保险与 AI 红利争论。"
     },
     {
-      "title": "一周国际新闻：伊朗风险、香格里拉对话与台湾 AI 供应链",
-      "url": "https://blog.js.gripe/zh-CN/posts/weekly-world-news-2026-05-25/",
-      "date": "Sun, 31 May 2026 00:00:00 GMT",
-      "excerpt": "台北时间 2026-05-25 至 2026-05-31 国际新闻视频制作版：伊朗战争风险、霍尔木兹海峡冲击、香格里拉对话与 Nvidia 在台投资。"
+      "title": "一周国际新闻：两份报告如何看同一个承压世界",
+      "url": "https://blog.js.gripe/zh-CN/posts/weekly-world-news-2026-06-15/",
+      "date": "Sun, 21 Jun 2026 00:00:00 GMT",
+      "excerpt": "台北时间 2026-06-15 至 2026-06-21 三地新闻观察：保留年导报告的戏剧张力与均报告的事实标尺，合读美伊框架、新加坡城市治理、台湾硅盾与美国制度压力。"
     },
     {
-      "title": "从自建搜索引擎入门到放弃",
-      "url": "https://blog.js.gripe/zh-CN/posts/searchme-search-engine-from-start-to-give-up/",
-      "date": "Sun, 31 May 2026 00:00:00 GMT",
-      "excerpt": "一次 SearchMe 自建搜索引擎折腾记：从 SearXNG 出发，尝试权重排序、内存写入、local_index，再折腾 Apache Nutch 爬虫，最后回到 search.js.gripe 当前采用的 SearXNG 路线。"
+      "title": "Claude Fable 5 / Mythos 5 下线风波：前沿模型、出口管制与 AI 舆论滥用",
+      "url": "https://blog.js.gripe/zh-CN/posts/claude-fable-mythos-5-export-control-rumor/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "围绕 Claude Fable 5 / Mythos 5 被迫暂停访问事件的一次审慎梳理：哪些是官方确认，哪些是媒体报道，哪些只能作为背景参照。"
     },
     {
-      "title": "一周国际新闻：伊朗谈判、基辅空袭与山西煤矿事故",
-      "url": "https://blog.js.gripe/zh-CN/posts/weekly-world-news-2026-05-18/",
-      "date": "Sun, 24 May 2026 00:00:00 GMT",
-      "excerpt": "台北时间 2026-05-18 至 2026-05-24 国际新闻视频制作版：伊朗与霍尔木兹谈判、基辅空袭、台湾军售、欧美关税、AI 芯片、洪灾高温与山西煤矿事故。"
+      "title": "一周国际新闻：美伊停火、通胀回潮与三语世界的排序差",
+      "url": "https://blog.js.gripe/zh-CN/posts/weekly-world-news-2026-06-08/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "台北时间 2026-06-08 至 2026-06-14 国际新闻观察：基于 ChatGPT Deep Research 与 Gemini DeepSearch 两份报告重写，覆盖美伊停火框架、美国通胀与全球增长、苹果 AI、五角大楼中国涉军企业名单、台湾灰色地带压力与新加坡枢纽化。"
     },
     {
-      "title": "Codex 历史对话加载很慢：先开个新对话让它自己诊断",
-      "url": "https://blog.js.gripe/zh-CN/posts/codex-history-load-slow-maintenance/",
-      "date": "Tue, 19 May 2026 00:00:00 GMT",
-      "excerpt": "Codex 历史对话加载慢时，不必一上来就手动翻数据库。更简单的做法是新开一个对话，让 Codex 判断原因并给出修复步骤。"
+      "title": "我们如何构建 dquery 递归解析器",
+      "url": "https://blog.js.gripe/zh-CN/posts/building-doh-resolver/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "从明文 DNS、递归解析路径、国家顶级域治理、DNS 污染，到个人规则、本地拦截和归一化缓存的一次工程复盘。"
     }
   ],
   "zh-TW": [
     {
-      "title": "一覺醒來，Windows Codex Desktop 的 Browser 和 Computer Use 都不可用了：直接讓 Codex 接手修",
-      "url": "https://blog.js.gripe/zh-TW/posts/codex-desktop-browser-computer-use-sandbox-recovery/",
-      "date": "Wed, 03 Jun 2026 00:00:00 GMT",
-      "excerpt": "電腦休眠後 Codex Desktop Browser、Computer Use 和智慧沙盒不可用時，把現場交給 Codex 接手排障和修復。"
+      "title": "AI 稅、失業與再培訓：當模型開始重寫工作的帳本",
+      "url": "https://blog.js.gripe/zh-TW/posts/ai-tax-unemployment-policy/",
+      "date": "Mon, 22 Jun 2026 00:00:00 GMT",
+      "excerpt": "基於 GPT 深度調查分析、Gemini 深度搜尋、均姐分析稿與年導分析稿，梳理各國如何面對 AI 取代工作、AI 稅、失業保險、再培訓、工資保險與 AI 紅利爭論。"
     },
     {
-      "title": "一週國際新聞：伊朗風險、香格里拉對話與台灣 AI 供應鏈",
-      "url": "https://blog.js.gripe/zh-TW/posts/weekly-world-news-2026-05-25/",
-      "date": "Sun, 31 May 2026 00:00:00 GMT",
-      "excerpt": "台北時間 2026-05-25 至 2026-05-31 國際新聞影片製作版：伊朗戰爭風險、荷莫茲海峽衝擊、香格里拉對話與 Nvidia 在台投資。"
+      "title": "一週國際新聞：兩份報告如何看同一個承壓世界",
+      "url": "https://blog.js.gripe/zh-TW/posts/weekly-world-news-2026-06-15/",
+      "date": "Sun, 21 Jun 2026 00:00:00 GMT",
+      "excerpt": "台北時間 2026-06-15 至 2026-06-21 三地新聞觀察：保留年導報告的戲劇張力與均報告的事實標尺，合讀美伊框架、新加坡城市治理、台灣矽盾與美國制度壓力。"
     },
     {
-      "title": "從自架搜尋引擎入門到放棄",
-      "url": "https://blog.js.gripe/zh-TW/posts/searchme-search-engine-from-start-to-give-up/",
-      "date": "Sun, 31 May 2026 00:00:00 GMT",
-      "excerpt": "一次 SearchMe 自架搜尋引擎的折騰紀錄：從 SearXNG 出發，試過權重排序、記憶體寫入、local_index，又折騰 Apache Nutch 爬蟲，最後回到 search.js.gripe 目前採用的 SearXNG 路線。"
+      "title": "Claude Fable 5 / Mythos 5 下線風波：前沿模型、出口管制與 AI 輿論濫用",
+      "url": "https://blog.js.gripe/zh-TW/posts/claude-fable-mythos-5-export-control-rumor/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "圍繞 Claude Fable 5 / Mythos 5 被迫暫停存取事件的一次審慎梳理：哪些是官方確認，哪些是媒體報導，哪些只能作為背景參照。"
     },
     {
-      "title": "一週國際新聞：伊朗談判、基輔空襲與山西煤礦事故",
-      "url": "https://blog.js.gripe/zh-TW/posts/weekly-world-news-2026-05-18/",
-      "date": "Sun, 24 May 2026 00:00:00 GMT",
-      "excerpt": "台北時間 2026-05-18 至 2026-05-24 國際新聞影片製作版：伊朗與荷莫茲談判、基輔空襲、台灣軍售、歐美關稅、AI 晶片、洪災高溫與山西煤礦事故。"
+      "title": "一週國際新聞：美伊停火、通膨回潮與三語世界的排序差",
+      "url": "https://blog.js.gripe/zh-TW/posts/weekly-world-news-2026-06-08/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "台北時間 2026-06-08 至 2026-06-14 國際新聞觀察：基於 ChatGPT Deep Research 與 Gemini DeepSearch 兩份報告重寫，覆蓋美伊停火框架、美國通膨與全球增長、蘋果 AI、五角大樓中國涉軍企業名單、台灣灰色地帶壓力與新加坡樞紐化。"
     },
     {
-      "title": "Codex 歷史對話載入很慢：先開個新對話讓它自己診斷",
-      "url": "https://blog.js.gripe/zh-TW/posts/codex-history-load-slow-maintenance/",
-      "date": "Tue, 19 May 2026 00:00:00 GMT",
-      "excerpt": "Codex 歷史對話載入慢時，不必一開始就手動翻資料庫。更簡單的做法是新開一個對話，讓 Codex 判斷原因並幫你清理歷史記錄。"
+      "title": "我們如何構建 dquery 遞歸解析器",
+      "url": "https://blog.js.gripe/zh-TW/posts/building-doh-resolver/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "從明文 DNS、遞歸解析路徑、國家頂級域治理、DNS 污染，到個人規則、本地攔截與正規化快取的一次工程復盤。"
     }
   ],
   "en": [
     {
-      "title": "When Windows Codex Desktop Wakes Up Without Browser or Computer Use: Let Codex Take Over the Repair",
-      "url": "https://blog.js.gripe/en/posts/codex-desktop-browser-computer-use-sandbox-recovery/",
-      "date": "Wed, 03 Jun 2026 00:00:00 GMT",
-      "excerpt": "A recovery note for Codex Desktop after sleep breaks Browser, Computer Use, or the sandbox helper."
+      "title": "AI Taxes, Job Loss, and Reskilling: When Models Rewrite the Labor Ledger",
+      "url": "https://blog.js.gripe/en/posts/ai-tax-unemployment-policy/",
+      "date": "Mon, 22 Jun 2026 00:00:00 GMT",
+      "excerpt": "A public-facing synthesis based on GPT Deep Research Analysis, Gemini Deep Search, Jun (均)'s analysis, and Nian (年)'s analysis on AI job displacemen..."
     },
     {
-      "title": "From Building My Own Search Engine to Giving Up",
-      "url": "https://blog.js.gripe/en/posts/searchme-search-engine-from-start-to-give-up/",
-      "date": "Sun, 31 May 2026 00:00:00 GMT",
-      "excerpt": "A SearchMe postmortem: starting with SearXNG, trying weighted ranking, in-memory writes, local_index, then Apache Nutch, and finally returning to th..."
+      "title": "Weekly World News: Two Reports on the Same Pressurized Week",
+      "url": "https://blog.js.gripe/en/posts/weekly-world-news-2026-06-15/",
+      "date": "Sun, 21 Jun 2026 00:00:00 GMT",
+      "excerpt": "A June 15-21, 2026 tri-regional media read: preserving Nian's dramatic operating frame and Jun's factual guardrails across the Iran framework, Singa..."
     },
     {
-      "title": "World News Weekly: Iran Risk, Shangri-La, and Taiwan's AI Supply Chain",
-      "url": "https://blog.js.gripe/en/posts/weekly-world-news-2026-05-25/",
-      "date": "Sun, 31 May 2026 00:00:00 GMT",
-      "excerpt": "Video edition for 2026-05-25 to 2026-05-31 Asia/Taipei time: Iran war risk, Hormuz pressure, the Shangri-La Dialogue, and Nvidia's Taiwan investment..."
+      "title": "How We Built the dquery Recursive Resolver",
+      "url": "https://blog.js.gripe/en/posts/building-doh-resolver/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "A practical write-up on dquery: plaintext DNS, recursive resolution, ccTLD governance, DNS pollution, local rules, blocking, and normalized caching."
     },
     {
-      "title": "World News Weekly: Iran Talks, Kyiv Strikes, and the Shanxi Mine Blast",
-      "url": "https://blog.js.gripe/en/posts/weekly-world-news-2026-05-18/",
-      "date": "Sun, 24 May 2026 00:00:00 GMT",
-      "excerpt": "Video edition for 2026-05-18 to 2026-05-24 Asia/Taipei time: Iran and Hormuz talks, Kyiv strikes, Taiwan arms sales, EU-US tariffs, AI chips, floods..."
+      "title": "The Claude Fable 5 / Mythos 5 Shutdown: Frontier Models, Export Controls, and AI Influence Abuse",
+      "url": "https://blog.js.gripe/en/posts/claude-fable-mythos-5-export-control-rumor/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "A close look at the forced suspension of Claude Fable 5 / Mythos 5 access: what is officially confirmed, what has been reported, and what belongs in..."
     },
     {
-      "title": "Codex History Loading Slowly? Open a Fresh Chat and Let Codex Diagnose It",
-      "url": "https://blog.js.gripe/en/posts/codex-history-load-slow-maintenance/",
-      "date": "Tue, 19 May 2026 00:00:00 GMT",
-      "excerpt": "When Codex history feels slow, do not start with database surgery. Open a new Codex chat, ask it to inspect safely, and let it suggest the fix."
+      "title": "World News Weekly: U.S.-Iran Pause, Inflation's Return, and Three Different News Maps",
+      "url": "https://blog.js.gripe/en/posts/weekly-world-news-2026-06-08/",
+      "date": "Mon, 15 Jun 2026 00:00:00 GMT",
+      "excerpt": "Asia/Taipei week of 2026-06-08 to 2026-06-14: rewritten from ChatGPT Deep Research and Gemini DeepSearch reports, covering the U.S.-Iran framework, ..."
     }
   ]
 }

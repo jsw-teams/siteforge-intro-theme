@@ -6,7 +6,7 @@ JS.Gripe is a public, read-only personal site. Public pages, Markdown mirrors, `
 
 ## Agent Registration
 
-Registration endpoint: https://js.gripe/auth.md
+Registration endpoint: https://www.js.gripe/auth.md
 
 Registration required: no
 
@@ -31,11 +31,11 @@ Agents may access public resources without creating an account, presenting a tok
 
 This site does not currently expose protected APIs. Agents should treat `/.well-known/oauth-protected-resource` and `/.well-known/oauth-authorization-server` as informational metadata that declares the public read scope and no OAuth credential grant flow.
 
-Protected resource metadata: https://js.gripe/.well-known/oauth-protected-resource
+Protected resource metadata: https://www.js.gripe/.well-known/oauth-protected-resource
 
-Authorization server metadata: https://js.gripe/.well-known/oauth-authorization-server
+Authorization server metadata: https://www.js.gripe/.well-known/oauth-authorization-server
 
-Agent auth metadata: https://js.gripe/.well-known/oauth-authorization-server#agent_auth
+Agent auth metadata: https://www.js.gripe/.well-known/oauth-authorization-server#agent_auth
 
 Scopes supported:
 
@@ -45,13 +45,13 @@ Scopes supported:
 
 No claims are required for public access.
 
-Claims endpoint: https://js.gripe/auth.md#claims
+Claims endpoint: https://www.js.gripe/auth.md#claims
 
 ## Revocation
 
 No revocation action is required because JS.Gripe does not issue credentials for public access.
 
-Revocation endpoint: https://js.gripe/auth.md#revocation
+Revocation endpoint: https://www.js.gripe/auth.md#revocation
 
 ## Contact
 

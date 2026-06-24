@@ -71,7 +71,7 @@ function getMarkdownHref(html) {
 }
 
 function hrefToDistPath(href) {
-  const url = new URL(href, 'https://js.gripe/');
+  const url = new URL(href, 'https://www.js.gripe/');
   const pathname = decodeURIComponent(url.pathname).replace(/^\/+/, '');
   return path.join(distDir, pathname);
 }
@@ -149,7 +149,7 @@ function getAttrFromAttrs(attrs, name) {
 
 function toAbsoluteIfInternal(href) {
   try {
-    const url = new URL(href, 'https://js.gripe/');
+    const url = new URL(href, 'https://www.js.gripe/');
     return url.toString();
   } catch {
     return href;

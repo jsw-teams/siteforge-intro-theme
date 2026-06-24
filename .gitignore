@@ -1,6 +1,8 @@
 node_modules/
 dist/
 .astro/
+current
+releases/
 screenshots/
 .edge-shot-profile/
 preview.log

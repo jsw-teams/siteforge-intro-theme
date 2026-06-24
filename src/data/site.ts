@@ -1,5 +1,5 @@
 export const site = {
-  url: 'https://js.gripe',
+  url: 'https://www.js.gripe',
   name: 'JS.Gripe / 技诉',
   shortName: 'JS.Gripe',
   zhName: '技诉',
