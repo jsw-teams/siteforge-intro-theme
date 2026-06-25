@@ -1,0 +1,25 @@
+---
+import MascotCard from './MascotCard.astro';
+import type { Lang, PageKey } from '../i18n/config';
+import { messages } from '../i18n/messages';
+import { getContentPage } from '../lib/content-pages';
+
+type Props = {
+  lang: Lang;
+  page: PageKey;
+  mascot: string;
+  mascotAlt: string;
+};
+
+const { lang, page, mascot, mascotAlt } = Astro.props;
+const t = messages[lang];
+const content = getContentPage(page, lang);
+---
+<section class="page-heading" aria-labelledby="page-title">
+  <h1 id="page-title">{content?.title ?? t.pages[page].heading}</h1>
+  {content?.lead && <p class="lead">{content.lead}</p>}
+</section>
+<div class="content-grid">
+  <section class="markdown-page" aria-label={t.pages[page].heading} set:html={content?.html ?? ''} />
+  <MascotCard image={mascot} compact alt={mascotAlt} />
+</div>

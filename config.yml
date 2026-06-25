@@ -1,0 +1,51 @@
+siteUrl: https://www.js.gripe
+blogUrl: https://blog.js.gripe/
+defaultLocale: zh-CN
+activeLocales:
+  - zh-CN
+  - zh-TW
+  - en
+siteName:
+  zh-CN: JS.Gripe / 技诉
+  zh-TW: JS.Gripe / 技訴
+  en: JS.Gripe
+shortName: JS.Gripe
+zhName:
+  zh-CN: 技诉
+  zh-TW: 技訴
+description:
+  zh-CN: 技术记录、项目展示、写作入口与公开联络的主站。
+  zh-TW: 技術紀錄、專案展示、寫作入口與公開聯絡的主站。
+  en: Main site for technical notes, project entries, writing, and public contact.
+author:
+  zh-CN: 技诉
+  zh-TW: 技訴
+  en: JS.Gripe
+theme:
+  name: jishu-pixel
+icons:
+  favicon: /assets/brand/site-icon.png
+  appleTouchIcon: /assets/brand/site-icon.png
+  ogImage: /assets/brand/site-icon.png
+  mascot: /assets/brand/mascot-sheet.png
+sitemap:
+  entryLimit: 50000
+robots:
+  header:
+    - Claude is not welcome here because this site owner does not welcome
+    - unethical AI crawlers that freely scrape sites while arbitrarily
+    - banning user accounts.
+  contentSignal: ai-train=no, search=yes, ai-input=yes
+  rules:
+    - userAgent: ClaudeBot
+      disallow:
+        - /
+    - userAgent: Claude-User
+      disallow:
+        - /
+    - userAgent: "*"
+      allow:
+        - /
+llms:
+  title: JS.Gripe / 技訴
+  description: Public main site for JS.Gripe technical notes, projects, writing, and contact.

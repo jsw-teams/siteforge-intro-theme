@@ -1,29 +1,13 @@
 ---
-import LanguageLinks from '../components/LanguageLinks.astro';
+import ContentPage from '../components/ContentPage.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { defaultLang, type PageKey } from '../i18n/config';
 import { messages } from '../i18n/messages';
-import { getPagePath } from '../lib/i18n';
 
 const lang = defaultLang;
 const page: PageKey = 'privacy';
 const t = messages[lang];
 ---
 <BaseLayout lang={lang} page={page}>
-  <LanguageLinks lang={lang} page={page} />
-  <section class="page-heading" aria-labelledby="page-title">
-    <h1 id="page-title">{t.pages.privacy.heading}</h1>
-  </section>
-  <section class="panel" aria-label={t.pages.privacy.heading}>
-    <p>{t.privacy.lead}</p>
-    {t.privacy.sections.map((section, index) => (
-      <section aria-labelledby={`privacy-section-${index + 1}`}>
-        <h2 id={`privacy-section-${index + 1}`}>{section.heading}</h2>
-        <ul class="plain-list">
-          {section.points.map((point) => <li>{point}</li>)}
-        </ul>
-      </section>
-    ))}
-    <p><a class="button-link" href={getPagePath(lang, 'contact')}>{t.privacy.contactCta}</a></p>
-  </section>
+  <ContentPage lang={lang} page={page} mascot="/assets/brand/mascot-sheet.png" mascotAlt={t.home.heroAlt} />
 </BaseLayout>

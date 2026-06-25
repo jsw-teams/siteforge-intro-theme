@@ -1,9 +1,10 @@
 ---
 import { footerItems } from '../data/nav';
 import { messages } from '../i18n/messages';
-import { site } from '../data/site';
 import type { Lang, PageKey } from '../i18n/config';
 import { getPagePath, withBase } from '../lib/i18n';
+import { getFooterCopyright } from '../lib/theme-config';
+import themeConfig from '../../themes/jishu-pixel/theme.yml?raw';
 
 type Props = {
   lang: Lang;
@@ -12,9 +13,10 @@ type Props = {
 
 const { lang, page } = Astro.props;
 const t = messages[lang];
+const copyright = getFooterCopyright(themeConfig, lang, new Date().getUTCFullYear());
 ---
 <footer class="site-footer">
-  <p class="footer-brand">&copy; {new Date().getUTCFullYear()} {site.shortName}</p>
+  {copyright && <p class="footer-brand">{copyright}</p>}
   <nav class="footer-links" aria-label={t.pages.privacy.heading}>
     {footerItems.map((item) => (
       <a href={getPagePath(lang, item)} aria-current={page === item ? 'page' : undefined}>

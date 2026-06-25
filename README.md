@@ -1,6 +1,14 @@
 # JS.Gripe / 技诉
 
-这是 JS.Gripe / 技诉 的公开展示站。前端页面面向访客，README 只写给维护者看。
+JS.Gripe 是基于 `myblog` 文件结构与主题思路二次开发的公开站点。这个仓库负责主站入口、页面内容、项目展示、联系方式、友情链接、隐私说明，以及从 myblog 文章索引加载的写作入口。
+
+当前主题为 `themes/jishu-pixel`。主题尽量沿用 myblog 的组织方式：主题配置、模板、样式和脚本放在主题目录内，站点页面只做必要装配。
+
+## 站务配置
+
+站务信息参考 myblog 的 `config.yml` 维护，根目录 [config.yml](config.yml) 是站点 URL、博客 URL、默认语言、站名、描述、图标、robots 和 llms 文案的入口。
+
+Astro 的 `site`、SEO 绝对地址、博客 feed 同步和 Markdown 镜像都会读取这份配置，不要在源码里另写一份 base URL。
 
 ## 本地开发
 
@@ -14,95 +22,94 @@ npm run dev
 ```sh
 npm run check
 npm run build
-npm audit
 ```
 
-构建产物会生成在 `dist/`。
+构建产物输出到 `dist/`。
 
-## 部署到 GitHub Pages
+## 内容维护
 
-推送到 `main` 后，GitHub Actions 会运行 `.github/workflows/pages.yml`，执行 `npm ci` 和 `npm run build`，然后把 `dist/` 发布到 GitHub Pages。
+- 可编辑页面：`content/pages/<page>/index.<lang>.md`
+- Astro 页面壳：`src/pages/` 和 `src/pages/[lang]/`
+- 主题配置：`themes/jishu-pixel/theme.yml`
+- 站务配置：`config.yml`
+- 主题样式：`themes/jishu-pixel/style.css`
+- 页面样式：`themes/jishu-pixel/styles/`
+- 主题脚本：`themes/jishu-pixel/scripts/`
+- 吉祥物与站点图标：`public/assets/brand/`
 
-部署完成后，可以在 GitHub Pages 的自定义域名设置里绑定 `js.gripe`。
+页面内容以 `zh-TW` 为主，并同步维护 `zh-CN` 与 `en`。
 
-## Cloudflare CDN 缓存
+## 项目展示
 
-GitHub Pages 不支持通过仓库里的 `_headers` 文件设置响应头。若前面套 Cloudflare CDN，建议在 Cloudflare Cache Rules 中配置：
+项目展示由人工维护，不在开发或构建时自动拉取 GitHub 仓库。
 
-- `js.gripe/_astro/*`、`js.gripe/assets/*`、`js.gripe/md/*`：Cache Everything，Edge TTL 30 天或更长。
-- `js.gripe/*.xml`、`js.gripe/*.txt`、`js.gripe/*.json`：Cache Everything，Edge TTL 1 小时到 1 天。
-- HTML 页面：保持默认或设置较短 Edge TTL，避免内容更新后长时间不刷新。
-
-## 部署到 VPS / OpenResty
-
-推荐将构建产物通过 release 目录原子切换到：
+项目页内容位于：
 
 ```text
-/var/www/js.gripe/current
+content/pages/projects/
 ```
 
-OpenResty 的 `root` 指向该软链接，部署脚本构建成功后再切换软链接。这样构建失败不会影响线上旧版本。
+目前项目卡片只保留平台、项目名称和查看源码入口。项目描述暂时留空，后续需要展示时直接改 Markdown 内容。
 
-## GitHub 公开项目展示
+## 写作入口
 
-项目页会在构建前执行：
+写作页保留主站页面结构，文章列表由浏览器端 JS 动态加载：
 
-```sh
-npm run sync:projects
+- 数据入口：`src/pages/recent-posts.json.ts`
+- 前端脚本：`public/assets/recent-posts.js`
+- 本地数据：`src/data/blog-posts.json`
+
+开发和构建前会运行 `scripts/sync-blog-feed.mjs` 同步 myblog 文章索引。
+
+## 联系方式和页面配置
+
+关于、隐私、联系方式、友情链接等页面都从 `content/pages/` 下的 Markdown 读取。联系方式建议保持三类常见入口：
+
+- 社交媒体，例如 X
+- 开发平台，例如 GitHub 或 GitLab
+- 邮箱，可选择是否公开 PGP 信息
+
+页脚版权由主题配置决定：
+
+```yaml
+footer:
+  copyright:
+    enabled: true
+    text:
+      zh-CN: "© {year} JS.Gripe"
+      zh-TW: "© {year} JS.Gripe"
+      en: "© {year} JS.Gripe"
 ```
 
-脚本会读取 `src/data/projects.config.json`，从 `https://api.github.com/users/jsw-teams/repos` 拉取公开仓库信息，并生成：
+## Sitemap 和 SEO 文件
+
+Sitemap 由 `@astrojs/sitemap` 生成。插件会先生成内部文件，`postbuild` 阶段会发布最终入口：
 
 ```text
-src/data/generated/github-projects.ts
+dist/sitemap.xml
 ```
 
-线上访问阶段只读取静态 HTML，不会再请求 GitHub API。
+`robots.txt`、`llms.txt`、`llms-full.txt` 和 Markdown 镜像由 `scripts/generate-seo-files.mjs` 在 `postbuild` 阶段生成。
 
-如果 VPS 配置了 `GITHUB_TOKEN` 或 `GH_TOKEN`，构建脚本会使用 token 避免 GitHub API 频率限制。没有 token 时也可以读取公开仓库，但频率限制更低。
+## 部署
 
-## 修改站点内容
+推送到 `main` 后，GitHub Actions 会运行 `.github/workflows/pages.yml`，执行安装、检查和构建，并发布 `dist/` 到 GitHub Pages。
 
-主要内容都在 `src/` 和 `public/` 中维护：
-
-- 页面文案和多语言内容：`src/i18n/messages.ts`
-- 导航项目：`src/data/nav.ts`
-- GitHub 项目展示配置：`src/data/projects.config.json`
-- 手工项目数据：`src/data/projects.ts`
-- 友情链接：`src/data/friends.ts`
-- 联系方式：`src/data/contact.ts`
-- 站点名称、域名、图片路径：`src/data/site.ts`
-- 页面结构：`src/pages/` 和 `src/pages/[lang]/`
-- 全局样式：`src/styles/global.css`
-
-修改 `messages.ts` 时，三种语言都要一起更新：`zh-CN`、`zh-TW`、`en`。
-
-## Markdown 和 Agent 文件
-
-这些文件给搜索引擎、Agent 或纯文本读取使用：
-
-- `dist/robots.txt`
-- `dist/llms.txt`
-- `dist/llms-full.txt`
-- `dist/md/zh-CN/`
-- `dist/md/zh-TW/`
-- `dist/md/en/`
-
-`llms.txt` 和 `llms-full.txt` 由 `scripts/generate-seo-files.mjs` 在 `postbuild` 阶段生成。
-
-## 上线前检查
+上线前建议确认：
 
 ```sh
 npm run check
 npm run build
 ```
 
-确认 `dist/` 中存在主要页面，例如：
+关键产物：
 
-- `dist/index.html`
-- `dist/contact/index.html`
-- `dist/projects/index.html`
-- `dist/zh-TW/index.html`
-- `dist/en/index.html`
-- `dist/llms.txt`
-- `dist/md/zh-CN/index.md`
+```text
+dist/index.html
+dist/sitemap.xml
+dist/robots.txt
+dist/llms.txt
+dist/md/zh-CN/index.md
+dist/md/zh-TW/index.md
+dist/md/en/index.md
+```

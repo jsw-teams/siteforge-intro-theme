@@ -1,0 +1,13 @@
+---
+import ContentPage from '../components/ContentPage.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { defaultLang, type PageKey } from '../i18n/config';
+import { messages } from '../i18n/messages';
+
+const lang = defaultLang;
+const page: PageKey = 'about';
+const t = messages[lang];
+---
+<BaseLayout lang={lang} page={page}>
+  <ContentPage lang={lang} page={page} mascot="/assets/brand/mascot-sheet.png" mascotAlt={t.about.mascotAlt} />
+</BaseLayout>

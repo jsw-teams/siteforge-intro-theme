@@ -1,9 +1,11 @@
 import fs from 'node:fs/promises';
 import fsSync from 'node:fs';
 import path from 'node:path';
+import { readSiteConfig } from './read-site-config.mjs';
 
 const languages = ['zh-CN', 'zh-TW', 'en'];
-const blogBaseUrl = 'https://blog.js.gripe/';
+const site = await readSiteConfig();
+const blogBaseUrl = site.blogUrl;
 const localBlogPublicDir = path.resolve(process.env.BLOG_PUBLIC_DIR ?? findDefaultBlogPublicDir());
 const outputPath = path.resolve('src/data/blog-posts.json');
 const maxPosts = 5;

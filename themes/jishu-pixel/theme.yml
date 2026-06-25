@@ -1,0 +1,119 @@
+name: jishu-pixel
+description: JS.Gripe main-site theme derived from myblog default.
+style: style.css
+script: scripts/consent.js
+templates: templates
+i18n: i18n.yml
+features:
+  search: false
+  lightbox: false
+  media: false
+  comments: false
+  webMcp: true
+featureScripts:
+  webMcp: /assets/agent-discovery.js
+featureStyles:
+  consent:
+    - styles/consent.css
+featureCategories:
+  webMcp: necessary
+consent:
+  enabled: true
+  storageKey: js-gripe-consent
+  revision: 1
+  categories:
+    necessary:
+      required: true
+    preferences:
+      required: false
+    analytics:
+      required: false
+    marketing:
+      required: false
+pageStyles:
+  home: styles/home.css
+  page: styles/page.css
+pageScripts:
+  home: []
+  page: []
+styles: []
+scripts:
+  head: []
+  bodyEnd: []
+icons:
+  favicon: /assets/brand/site-icon.png
+  icon32: /assets/brand/site-icon.png
+  appleTouchIcon: /assets/brand/site-icon.png
+pwa:
+  backgroundColor: "#f8f4ec"
+  themeColor: "#171514"
+nav:
+  links:
+    - key: home
+      href: /:locale/
+      label:
+        zh-CN: 首页
+        zh-TW: 首頁
+        en: Home
+    - key: about
+      href: /:locale/about/
+      label:
+        zh-CN: 关于
+        zh-TW: 關於
+        en: About
+    - key: projects
+      href: /:locale/projects/
+      label:
+        zh-CN: 项目
+        zh-TW: 專案
+        en: Projects
+    - key: writing
+      href: /:locale/writing/
+      label:
+        zh-CN: 写作
+        zh-TW: 寫作
+        en: Writing
+    - key: friends
+      href: /:locale/friends/
+      label:
+        zh-CN: 友情链接
+        zh-TW: 友情連結
+        en: Friends
+    - key: contact
+      href: /:locale/contact/
+      label:
+        zh-CN: 联系方式
+        zh-TW: 聯絡方式
+        en: Contact
+footer:
+  copyright:
+    enabled: true
+    text:
+      zh-CN: "© {year} JS.Gripe"
+      zh-TW: "© {year} JS.Gripe"
+      en: "© {year} JS.Gripe"
+  links:
+    - key: about
+      href: /:locale/about/
+      label:
+        zh-CN: 关于
+        zh-TW: 關於
+        en: About
+    - key: privacy
+      href: /:locale/privacy/
+      label:
+        zh-CN: 隐私政策
+        zh-TW: 隱私政策
+        en: Privacy
+    - key: contact
+      href: /:locale/contact/
+      label:
+        zh-CN: 联系方式
+        zh-TW: 聯絡方式
+        en: Contact
+    - key: sitemap
+      href: /sitemap.xml
+      label:
+        zh-CN: 站点地图
+        zh-TW: 站點地圖
+        en: Sitemap

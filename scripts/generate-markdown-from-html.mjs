@@ -2,9 +2,11 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readSiteConfig } from './read-site-config.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const distDir = path.join(root, 'dist');
+const site = await readSiteConfig(root);
 
 async function main() {
   const htmlFiles = await findFiles(distDir, (file) => file.endsWith('.html'));
@@ -71,7 +73,7 @@ function getMarkdownHref(html) {
 }
 
 function hrefToDistPath(href) {
-  const url = new URL(href, 'https://www.js.gripe/');
+  const url = new URL(href, site.siteUrl);
   const pathname = decodeURIComponent(url.pathname).replace(/^\/+/, '');
   return path.join(distDir, pathname);
 }
@@ -149,7 +151,7 @@ function getAttrFromAttrs(attrs, name) {
 
 function toAbsoluteIfInternal(href) {
   try {
-    const url = new URL(href, 'https://www.js.gripe/');
+    const url = new URL(href, site.siteUrl);
     return url.toString();
   } catch {
     return href;

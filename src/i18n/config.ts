@@ -12,12 +12,13 @@ export const languageNames: Record<Lang, string> = {
   en: 'English'
 };
 
-export const pageKeys = ['home', 'projects', 'writing', 'privacy', 'friends', 'contact'] as const;
+export const pageKeys = ['home', 'about', 'projects', 'writing', 'privacy', 'friends', 'contact'] as const;
 
 export type PageKey = (typeof pageKeys)[number];
 
 export const pageSlugs: Record<PageKey, string> = {
   home: '',
+  about: 'about',
   projects: 'projects',
   writing: 'writing',
   privacy: 'privacy',

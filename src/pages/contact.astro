@@ -1,8 +1,6 @@
 ---
-import LanguageLinks from '../components/LanguageLinks.astro';
-import MascotCard from '../components/MascotCard.astro';
+import ContentPage from '../components/ContentPage.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { contactLinks } from '../data/contact';
 import { defaultLang, type PageKey } from '../i18n/config';
 import { messages } from '../i18n/messages';
 
@@ -11,28 +9,5 @@ const page: PageKey = 'contact';
 const t = messages[lang];
 ---
 <BaseLayout lang={lang} page={page}>
-  <LanguageLinks lang={lang} page={page} />
-  <section class="page-heading" aria-labelledby="page-title">
-    <h1 id="page-title">{t.pages.contact.heading}</h1>
-  </section>
-  <div class="content-grid">
-    <section class="list-grid" aria-label={t.pages.contact.heading}>
-      <div class="panel notice">
-        <p>{t.contact.safetyNote}</p>
-      </div>
-      {contactLinks.length === 0 ? (
-        <div class="empty-state">
-          <h2>{t.contact.emptyTitle}</h2>
-        </div>
-      ) : (
-        contactLinks.map((item) => (
-          <article class="entry-card">
-            <h2><a href={item.href} rel="noopener noreferrer">{item.label[lang]}</a></h2>
-            {item.note && <p>{item.note[lang]}</p>}
-          </article>
-        ))
-      )}
-    </section>
-    <MascotCard image="/assets/brand/mascot-contact.png" compact alt={t.contact.mascotAlt} />
-  </div>
+  <ContentPage lang={lang} page={page} mascot="/assets/brand/mascot-contact.png" mascotAlt={t.contact.mascotAlt} />
 </BaseLayout>

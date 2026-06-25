@@ -6,7 +6,10 @@ import type { Lang, PageKey } from '../i18n/config';
 import { messages } from '../i18n/messages';
 import type { SeoOverrides } from '../lib/seo';
 import { withBase } from '../lib/i18n';
+import '../../themes/jishu-pixel/style.css';
 import '../styles/global.css';
+import consentScriptUrl from '../../themes/jishu-pixel/scripts/consent.js?url';
+import consentStyleUrl from '../../themes/jishu-pixel/styles/consent.css?url';
 
 type Props = {
   lang: Lang;
@@ -16,12 +19,42 @@ type Props = {
 
 const { lang, page, seo } = Astro.props;
 const t = messages[lang];
+const themeConfig = {
+  locales: ['zh-CN', 'zh-TW', 'en'],
+  defaultLocale: 'zh-CN',
+  storageKey: 'js-gripe.locale',
+  basePath: import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, ''),
+  themeFeatures: {
+    webMcp: true
+  },
+  themeFeatureScripts: {
+    webMcp: withBase('/assets/agent-discovery.js')
+  },
+  themeFeatureStyles: {
+    consent: [consentStyleUrl]
+  },
+  themeFeatureCategories: {
+    webMcp: 'necessary'
+  },
+  themeConsent: {
+    enabled: true,
+    storageKey: 'js-gripe-consent',
+    revision: 1,
+    categories: {
+      necessary: { required: true },
+      preferences: { required: false },
+      analytics: { required: false },
+      marketing: { required: false }
+    }
+  }
+};
 ---
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <Seo lang={lang} page={page} seo={seo} />
   </head>
   <body>
@@ -33,6 +66,8 @@ const t = messages[lang];
       </main>
       <Footer lang={lang} page={page} />
     </div>
-    <script src={withBase('/assets/agent-discovery.js')} defer></script>
+    <script is:inline set:html={`window.JSGripeConfig = ${JSON.stringify(themeConfig)};`} />
+    <script is:inline src={consentScriptUrl} defer></script>
+    <script is:inline src={withBase('/assets/site-icons.js')} defer></script>
   </body>
 </html>

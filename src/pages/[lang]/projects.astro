@@ -1,12 +1,9 @@
 ---
-import LanguageLinks from '../../components/LanguageLinks.astro';
-import MascotCard from '../../components/MascotCard.astro';
+import ContentPage from '../../components/ContentPage.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getProjectDescription } from '../../data/project-descriptions';
 import { prefixedLanguages, type PageKey } from '../../i18n/config';
 import { messages } from '../../i18n/messages';
 import { getLang } from '../../lib/i18n';
-import { getPublicProjects } from '../../lib/projects';
 
 export function getStaticPaths() {
   return prefixedLanguages.map((lang) => ({ params: { lang } }));
@@ -15,43 +12,7 @@ export function getStaticPaths() {
 const lang = getLang(Astro.params.lang);
 const page: PageKey = 'projects';
 const t = messages[lang];
-const projects = getPublicProjects();
 ---
 <BaseLayout lang={lang} page={page} seo={{ robots: 'noindex, follow' }}>
-  <LanguageLinks lang={lang} page={page} />
-  <section class="page-heading" aria-labelledby="page-title">
-    <h1 id="page-title">{t.pages.projects.heading}</h1>
-  </section>
-  <div class="content-grid">
-    <section class="list-grid" aria-label={t.pages.projects.heading}>
-      {projects.length === 0 ? (
-        <div class="empty-state">
-          <h2>{t.projects.emptyTitle}</h2>
-        </div>
-      ) : (
-        projects.map((project) => (
-          <article class="entry-card">
-            <h2>{project.name}</h2>
-            {getProjectDescription(project.fullName, lang, project.description) && (
-              <p>{getProjectDescription(project.fullName, lang, project.description)}</p>
-            )}
-            <p class="article-meta">
-              {project.language && <span>{project.language}</span>}
-              {typeof project.stars === 'number' && <span> · ★ {project.stars}</span>}
-              {typeof project.forks === 'number' && <span> · Forks {project.forks}</span>}
-              {project.pushedAt && <span> · Updated {new Date(project.pushedAt).toLocaleDateString(lang)}</span>}
-            </p>
-            {project.topics && project.topics.length > 0 && (
-              <p>{project.topics.slice(0, 6).map((topic) => `#${topic}`).join(' ')}</p>
-            )}
-            <p>
-              <a class="button-link" href={project.url} rel="noopener noreferrer nofollow">GitHub</a>
-              {project.homepage && <a class="button-link" href={project.homepage} rel="noopener noreferrer nofollow">Website</a>}
-            </p>
-          </article>
-        ))
-      )}
-    </section>
-    <MascotCard image="/assets/brand/mascot-laptop.png" compact alt={t.projects.mascotAlt} />
-  </div>
+  <ContentPage lang={lang} page={page} mascot="/assets/brand/mascot-sheet.png" mascotAlt={t.projects.mascotAlt} />
 </BaseLayout>

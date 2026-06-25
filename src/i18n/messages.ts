@@ -17,6 +17,7 @@ type Messages = {
   sitemap: string;
   cards: {
     projects: string;
+    about: string;
     writing: string;
     friends: string;
     contact: string;
@@ -28,12 +29,24 @@ type Messages = {
     entries: Record<'projects' | 'writing' | 'friends' | 'contact', string>;
   };
   projects: {
+    lead: string;
     emptyTitle: string;
     mascotAlt: string;
   };
+  about: {
+    lead: string;
+    sections: Array<{
+      heading: string;
+      points: string[];
+    }>;
+    mascotAlt: string;
+  };
   writing: {
+    lead: string;
     blogLink: string;
     recentHeading: string;
+    loadingTitle: string;
+    loadingText: string;
     emptyTitle: string;
     emptyText: string;
     readMore: string;
@@ -49,11 +62,13 @@ type Messages = {
     contactCta: string;
   };
   friends: {
+    lead: string;
     emptyTitle: string;
     langLabel: string;
     mascotAlt: string;
   };
   contact: {
+    lead: string;
     emptyTitle: string;
     safetyNote: string;
     mascotAlt: string;
@@ -72,6 +87,7 @@ export const messages: Record<Lang, Messages> = {
     sitemap: '站点地图',
     cards: {
       projects: '项目',
+      about: '关于',
       writing: '写作',
       friends: '友情链接',
       contact: '联系方式'
@@ -88,12 +104,43 @@ export const messages: Record<Lang, Messages> = {
       }
     },
     projects: {
+      lead: '项目展示由人工维护，只放需要被看见的公开入口，不再自动展开所有仓库。',
       emptyTitle: '公开项目正在整理',
       mascotAlt: '技诉正在电脑前整理项目的黑熊吉祥物'
     },
+    about: {
+      lead: '技诉是一个把技术复盘、网络实验、部署记录和工具排障收拢起来的公开入口。',
+      sections: [
+        {
+          heading: '写什么',
+          points: [
+            'myblog 里的文章围绕真实工程问题展开：DoH 解析器、Webhook 部署、Codex 桌面排障、Cloudflare 与 OpenResty 链路。',
+            '文章不追求把项目包装成产品，而是把边界、取舍、失败路径和可复用经验留下来。'
+          ]
+        },
+        {
+          heading: '怎么组织',
+          points: [
+            'myblog 负责长文和订阅源，myweb 负责公开入口、人工维护的项目展示、联系渠道和必要政策页面。',
+            '主题沿用 myblog 的像素边框、纸面底色和黑熊吉祥物，让主站像博客的控制台，而不是另一套站点。'
+          ]
+        },
+        {
+          heading: '怎么维护',
+          points: [
+            '项目、友情链接和联系方式由人工配置维护，避免自动同步把所有仓库和临时实验都暴露出来。',
+            '写作页只保留壳和入口，最近文章交给前端 JS 从 JSON 端点动态加载。'
+          ]
+        }
+      ],
+      mascotAlt: '技诉黑熊吉祥物正在阅读站点说明'
+    },
     writing: {
+      lead: '最近文章由浏览器端动态加载，完整归档仍在 myblog。',
       blogLink: '打开全部写作',
       recentHeading: '最近文章',
+      loadingTitle: '正在读取文章',
+      loadingText: '浏览器正在从文章索引载入最近内容。',
       emptyTitle: '文章正在整理',
       emptyText: '暂时没有从订阅源读取到文章，稍后会在这里展示最新内容。',
       readMore: '阅读全文',
@@ -148,11 +195,13 @@ export const messages: Record<Lang, Messages> = {
       contactCta: '查看联系方式'
     },
     friends: {
+      lead: '这里保留和技诉相关的公开服务入口，按人工配置维护。',
       emptyTitle: '友情链接暂未列出',
       langLabel: '语言',
       mascotAlt: '技诉举着友情链接牌的黑熊吉祥物'
     },
     contact: {
+      lead: '公开联系方式只保留必要渠道，适合站点、隐私和公开服务反馈。',
       emptyTitle: '暂无公开联系方式',
       safetyNote: '请不要通过公开页面发送敏感信息。',
       mascotAlt: '技诉拿着手机的黑熊吉祥物'
@@ -163,6 +212,11 @@ export const messages: Record<Lang, Messages> = {
         description: '技诉收拢技术记录、项目展示、写作与公开联络。',
         eyebrow: 'JS.Gripe',
         heading: '技诉'
+      },
+      about: {
+        title: '关于 / JS.Gripe',
+        description: '关于 JS.Gripe、myblog 主题和公开站点信息的说明。',
+        heading: '关于'
       },
       projects: {
         title: '项目 / JS.Gripe',
@@ -201,6 +255,7 @@ export const messages: Record<Lang, Messages> = {
     sitemap: '站點地圖',
     cards: {
       projects: '專案',
+      about: '關於',
       writing: '寫作',
       friends: '友情連結',
       contact: '聯絡方式'
@@ -217,12 +272,43 @@ export const messages: Record<Lang, Messages> = {
       }
     },
     projects: {
+      lead: '專案展示由人工維護，只放需要被看見的公開入口，不再自動展開所有倉庫。',
       emptyTitle: '公開專案正在整理',
       mascotAlt: '技訴正在電腦前整理專案的黑熊吉祥物'
     },
+    about: {
+      lead: '技訴是一個把技術復盤、網路實驗、部署紀錄和工具排障收攏起來的公開入口。',
+      sections: [
+        {
+          heading: '寫什麼',
+          points: [
+            'myblog 裡的文章圍繞真實工程問題展開：DoH 解析器、Webhook 部署、Codex 桌面排障、Cloudflare 與 OpenResty 鏈路。',
+            '文章不追求把專案包裝成產品，而是把邊界、取捨、失敗路徑和可復用經驗留下來。'
+          ]
+        },
+        {
+          heading: '怎麼組織',
+          points: [
+            'myblog 負責長文和訂閱源，myweb 負責公開入口、人工維護的專案展示、聯絡管道和必要政策頁面。',
+            '主題沿用 myblog 的像素邊框、紙面底色和黑熊吉祥物，讓主站像部落格的控制台，而不是另一套站點。'
+          ]
+        },
+        {
+          heading: '怎麼維護',
+          points: [
+            '專案、友情連結和聯絡方式由人工設定維護，避免自動同步把所有倉庫和臨時實驗都暴露出來。',
+            '寫作頁只保留殼和入口，最近文章交給前端 JS 從 JSON 端點動態載入。'
+          ]
+        }
+      ],
+      mascotAlt: '技訴黑熊吉祥物正在閱讀站點說明'
+    },
     writing: {
+      lead: '最近文章由瀏覽器端動態載入，完整歸檔仍在 myblog。',
       blogLink: '打開全部寫作',
       recentHeading: '最近文章',
+      loadingTitle: '正在讀取文章',
+      loadingText: '瀏覽器正在從文章索引載入最近內容。',
       emptyTitle: '文章正在整理',
       emptyText: '暫時沒有從訂閱源讀取到文章，稍後會在這裡展示最新內容。',
       readMore: '閱讀全文',
@@ -277,11 +363,13 @@ export const messages: Record<Lang, Messages> = {
       contactCta: '查看聯絡方式'
     },
     friends: {
+      lead: '這裡保留和技訴相關的公開服務入口，按人工設定維護。',
       emptyTitle: '友情連結暫未列出',
       langLabel: '語言',
       mascotAlt: '技訴舉著友情連結牌的黑熊吉祥物'
     },
     contact: {
+      lead: '公開聯絡方式只保留必要管道，適合站點、隱私和公開服務回饋。',
       emptyTitle: '暫無公開聯絡方式',
       safetyNote: '請不要透過公開頁面傳送敏感資訊。',
       mascotAlt: '技訴拿著手機的黑熊吉祥物'
@@ -292,6 +380,11 @@ export const messages: Record<Lang, Messages> = {
         description: '技訴收攏技術紀錄、專案展示、寫作與公開聯絡。',
         eyebrow: 'JS.Gripe',
         heading: '技訴'
+      },
+      about: {
+        title: '關於 / JS.Gripe',
+        description: '關於 JS.Gripe、myblog 主題和公開站點資訊的說明。',
+        heading: '關於'
       },
       projects: {
         title: '專案 / JS.Gripe',
@@ -330,6 +423,7 @@ export const messages: Record<Lang, Messages> = {
     sitemap: 'Sitemap',
     cards: {
       projects: 'Projects',
+      about: 'About',
       writing: 'Writing',
       friends: 'Friends',
       contact: 'Contact'
@@ -346,12 +440,43 @@ export const messages: Record<Lang, Messages> = {
       }
     },
     projects: {
+      lead: 'Project display is hand maintained, showing only public entries that should be seen instead of expanding every repository automatically.',
       emptyTitle: 'Public projects are being curated',
       mascotAlt: 'JS.Gripe black bear mascot working at a computer'
     },
+    about: {
+      lead: 'JS.Gripe is a public entry point for technical retrospectives, network experiments, deployment notes, and tool recovery records.',
+      sections: [
+        {
+          heading: 'What it covers',
+          points: [
+            'The myblog articles follow real engineering problems: DoH resolvers, webhook deployment, Codex Desktop recovery, and Cloudflare/OpenResty paths.',
+            'The writing keeps boundaries, tradeoffs, failure paths, and reusable notes instead of polishing every experiment into a product.'
+          ]
+        },
+        {
+          heading: 'How it is organized',
+          points: [
+            'myblog owns long-form writing and feeds; myweb owns the public entry, hand-maintained projects, contact channels, and policy pages.',
+            'The theme extends myblog with pixel borders, paper color, and the black bear mascot so the main site feels like the blog control surface.'
+          ]
+        },
+        {
+          heading: 'How it is maintained',
+          points: [
+            'Projects, friends, and contact channels are manually configured so temporary experiments and private context are not exposed automatically.',
+            'The writing page keeps the shell and blog entry; recent posts are loaded by browser-side JS from a JSON endpoint.'
+          ]
+        }
+      ],
+      mascotAlt: 'JS.Gripe black bear mascot reading site notes'
+    },
     writing: {
+      lead: 'Recent posts load in the browser; the full archive still lives in myblog.',
       blogLink: 'Open all writing',
       recentHeading: 'Recent posts',
+      loadingTitle: 'Loading posts',
+      loadingText: 'The browser is loading recent writing from the post index.',
       emptyTitle: 'Posts are being organized',
       emptyText: 'No posts were available from the feed yet. The latest writing will appear here once it is ready.',
       readMore: 'Read article',
@@ -406,11 +531,13 @@ export const messages: Record<Lang, Messages> = {
       contactCta: 'View contact options'
     },
     friends: {
+      lead: 'Public service links related to JS.Gripe, maintained by hand.',
       emptyTitle: 'No friend links listed yet',
       langLabel: 'Language',
       mascotAlt: 'JS.Gripe black bear mascot holding a friend links sign'
     },
     contact: {
+      lead: 'Public contact stays limited to necessary channels for site, privacy, and public service feedback.',
       emptyTitle: 'No public contact option yet',
       safetyNote: 'Please do not send sensitive information through public pages.',
       mascotAlt: 'JS.Gripe black bear mascot holding a phone'
@@ -421,6 +548,11 @@ export const messages: Record<Lang, Messages> = {
         description: 'JS.Gripe collects technical notes, public projects, writing, and contact.',
         eyebrow: 'JS.Gripe',
         heading: 'JS.Gripe'
+      },
+      about: {
+        title: 'About / JS.Gripe',
+        description: 'About JS.Gripe, the myblog theme, and public site information.',
+        heading: 'About'
       },
       projects: {
         title: 'Projects / JS.Gripe',
