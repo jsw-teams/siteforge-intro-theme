@@ -41,7 +41,7 @@ scripts:
   head: []
   bodyEnd:
     - src: scripts/site-icons.js
-      consent: preferences
+      consent: necessary
       defer: true
 icons:
   favicon: /assets/brand/site-icon.png
