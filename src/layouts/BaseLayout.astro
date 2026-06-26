@@ -6,10 +6,10 @@ import type { Lang, PageKey } from '../i18n/config';
 import { messages } from '../i18n/messages';
 import type { SeoOverrides } from '../lib/seo';
 import { withBase } from '../lib/i18n';
-import '../../themes/intro/style.css';
-import '../styles/global.css';
 import consentScriptUrl from '../../themes/intro/scripts/consent.js?url';
 import consentStyleRaw from '../../themes/intro/styles/consent.css?raw';
+import themeStyleRaw from '../../themes/intro/style.css?raw';
+import appStyleRaw from '../styles/global.css?raw';
 import themeConfigRaw from '../../themes/intro/theme.yml?raw';
 import webMcpScriptRaw from '../../themes/intro/scripts/web-mcp.js?raw';
 import { getThemeAssetUrls, getThemeBodyEndScripts, getThemeBrowserConfig, getThemeHeadScripts } from '../lib/theme-config';
@@ -78,7 +78,9 @@ const consentBootScript = `try{var c=JSON.parse(localStorage.getItem('js-gripe-c
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
     <script is:inline set:html={consentBootScript}></script>
+    <style is:inline set:html={`${themeStyleRaw}\n${appStyleRaw}`}></style>
     <style is:inline set:html={consentStyleRaw}></style>
     <Seo lang={lang} page={page} seo={seo} />
     {headScripts.map((script) =>
