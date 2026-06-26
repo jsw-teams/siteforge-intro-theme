@@ -88,7 +88,7 @@ footer:
 
 - OAuth Protected Resource Metadata：`/.well-known/oauth-protected-resource`
 - Authorization Server Metadata：`/.well-known/oauth-authorization-server`
-- WebMCP：`themes/intro/scripts/web-mcp.js` 由主题 `scripts.head` 直接加载，并调用 `navigator.modelContext.provideContext()`
+- WebMCP：`themes/intro/scripts/web-mcp.js` 由主题 `scripts.head` 声明，构建时内嵌到页面 `<head>`，并调用 `navigator.modelContext.provideContext()`
 - Agent skills：`/.well-known/agent-skills/index.json`
 
 `/.well-known/oauth-protected-resource` 使用 canonical resource `https://www.js.gripe/`，并声明 `authorization_servers` 与 `scopes_supported`。

@@ -11,6 +11,7 @@ import '../styles/global.css';
 import consentScriptUrl from '../../themes/intro/scripts/consent.js?url';
 import consentStyleUrl from '../../themes/intro/styles/consent.css?url';
 import themeConfigRaw from '../../themes/intro/theme.yml?raw';
+import webMcpScriptRaw from '../../themes/intro/scripts/web-mcp.js?raw';
 import { getThemeAssetUrls, getThemeBodyEndScripts, getThemeBrowserConfig, getThemeHeadScripts } from '../lib/theme-config';
 
 type Props = {
@@ -29,6 +30,8 @@ const themeConfig = getThemeBrowserConfig(themeConfigRaw, {
 });
 const bodyEndScripts = getThemeBodyEndScripts(themeConfigRaw, withBase, themeAssetUrls);
 const headScripts = getThemeHeadScripts(themeConfigRaw, withBase, themeAssetUrls);
+const getInlineHeadScript = (src: string) =>
+  src.endsWith('/assets/theme/intro/scripts/web-mcp.js') ? webMcpScriptRaw : '';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -37,15 +40,19 @@ const headScripts = getThemeHeadScripts(themeConfigRaw, withBase, themeAssetUrls
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <Seo lang={lang} page={page} seo={seo} />
-    {headScripts.map((script) => (
-      <script
-        is:inline
-        src={script.src}
-        defer={script.defer}
-        async={script.async}
-        {...script.attrs}
-      ></script>
-    ))}
+    {headScripts.map((script) =>
+      getInlineHeadScript(script.src) ? (
+        <script is:inline set:html={getInlineHeadScript(script.src)}></script>
+      ) : (
+        <script
+          is:inline
+          src={script.src}
+          defer={script.defer}
+          async={script.async}
+          {...script.attrs}
+        ></script>
+      )
+    )}
   </head>
   <body>
     <a class="skip-link" href="#main">{t.skip}</a>
