@@ -6,6 +6,7 @@ import { messages } from '../../i18n/messages';
 import { getLang, getPagePath } from '../../lib/i18n';
 import { getThemeNavigation } from '../../lib/theme-config';
 import themeConfigRaw from '../../../themes/intro/theme.yml?raw';
+import '../../../themes/intro/styles/home.css';
 
 export function getStaticPaths() {
   return prefixedLanguages.map((lang) => ({ params: { lang } }));

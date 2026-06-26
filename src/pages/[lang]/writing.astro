@@ -7,6 +7,7 @@ import { getBlogUrl } from '../../lib/blog';
 import { getLang, withBase } from '../../lib/i18n';
 import { getThemePageMascot } from '../../lib/theme-config';
 import themeConfigRaw from '../../../themes/intro/theme.yml?raw';
+import '../../../themes/intro/styles/page.css';
 
 export function getStaticPaths() {
   return prefixedLanguages.map((lang) => ({ params: { lang } }));

@@ -4,6 +4,8 @@
   z-index: 1200;
   display: grid;
   align-items: end;
+  overflow: auto;
+  overscroll-behavior: contain;
   padding: 0.9rem clamp(1rem, 4vw, 2rem);
   pointer-events: auto;
 }
@@ -123,10 +125,6 @@ body.consent-pending main,
 body.consent-pending .site-footer {
   pointer-events: none;
   user-select: none;
-}
-
-body.consent-pending {
-  overflow: hidden;
 }
 
 @media (max-width: 980px) {
