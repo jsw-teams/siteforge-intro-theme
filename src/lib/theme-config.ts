@@ -42,6 +42,7 @@ export function getThemeAssetUrls(
   };
 
   Object.values(readMap(themeConfig, 'featureScripts')).forEach(setThemeAsset);
+  for (const script of readScripts(themeConfig, 'head')) setThemeAsset(script.src);
   for (const script of readScripts(themeConfig, 'bodyEnd')) setThemeAsset(script.src);
 
   return assetUrls;
@@ -112,6 +113,19 @@ export function getThemeBodyEndScripts(
     .map((script) => ({
       ...script,
       src: withBase(resolveThemeAsset(script.src))
+    }));
+}
+
+export function getThemeHeadScripts(
+  themeConfig: string,
+  withBase: (path: string) => string,
+  assetUrls: Record<string, string> = {}
+): ThemeScript[] {
+  return readScripts(themeConfig, 'head')
+    .filter((script) => script.src)
+    .map((script) => ({
+      ...script,
+      src: withBase(createThemeAssetResolver(assetUrls)(script.src))
     }));
 }
 

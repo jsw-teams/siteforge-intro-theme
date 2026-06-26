@@ -4,7 +4,7 @@ Use this skill to discover public JS.Gripe sections.
 
 ## Tool
 
-Call the WebMCP `list_site_sections` tool on `https://js.gripe/`.
+Call the WebMCP `list_site_sections` tool on `https://www.js.gripe/`.
 
 ## Output
 

@@ -7,7 +7,7 @@
   "transports": [
     {
       "type": "webmcp",
-      "endpoint": "https://js.gripe/"
+      "endpoint": "https://www.js.gripe/"
     }
   ],
   "capabilities": {
@@ -22,13 +22,13 @@
       }
     ],
     "resources": [
-      "https://js.gripe/llms.txt",
-      "https://js.gripe/llms-full.txt",
-      "https://js.gripe/.well-known/api-catalog"
+      "https://www.js.gripe/llms.txt",
+      "https://www.js.gripe/llms-full.txt",
+      "https://www.js.gripe/.well-known/api-catalog"
     ]
   },
   "auth": {
     "type": "none",
-    "metadata": "https://js.gripe/auth.md"
+    "metadata": "https://www.js.gripe/auth.md"
   }
 }

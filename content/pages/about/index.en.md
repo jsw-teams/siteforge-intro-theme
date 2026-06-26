@@ -10,7 +10,7 @@ title: About JS.Gripe
 ## How it is organized
 
 - myblog owns long-form writing, feeds, and archives.
-- myweb owns the public entry, hand-maintained projects, service links, contact channels, and policy pages.
+- siteforge-intro-theme owns the public entry, hand-maintained projects, service links, contact channels, and policy pages.
 - The theme extends myblog with paper color, heavy pixel borders, monospace headings, and the black bear mascot.
 
 ## How it is maintained

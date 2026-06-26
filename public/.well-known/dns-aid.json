@@ -8,7 +8,7 @@
       "target_name": ".",
       "svc_params": {
         "alpn": ["h2", "http/1.1"],
-        "endpoint": "https://js.gripe/.well-known/agent-skills/index.json"
+        "endpoint": "https://www.js.gripe/.well-known/agent-skills/index.json"
       }
     },
     {
@@ -18,7 +18,7 @@
       "target_name": ".",
       "svc_params": {
         "alpn": ["h2", "http/1.1"],
-        "endpoint": "https://js.gripe/.well-known/mcp/server-card.json"
+        "endpoint": "https://www.js.gripe/.well-known/mcp/server-card.json"
       }
     }
   ],

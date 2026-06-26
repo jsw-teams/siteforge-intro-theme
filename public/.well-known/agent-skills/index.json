@@ -5,14 +5,14 @@
       "name": "list_site_sections",
       "type": "webmcp-tool",
       "description": "List public JS.Gripe sections and canonical URLs.",
-      "url": "https://js.gripe/.well-known/agent-skills/list-site-sections.md",
+      "url": "https://www.js.gripe/.well-known/agent-skills/list-site-sections.md",
       "sha256": "9a871868c19494087813fbe28c2ed2aa131d4d3e3c8ac65badb239e2a10d60cb"
     },
     {
       "name": "list_discovery_resources",
       "type": "webmcp-tool",
       "description": "List machine-readable discovery resources published by JS.Gripe.",
-      "url": "https://js.gripe/.well-known/agent-skills/discovery-resources.md",
+      "url": "https://www.js.gripe/.well-known/agent-skills/discovery-resources.md",
       "sha256": "20a00ab03307cd0e0ae3a886a730ccbffd846ed3bc83d841461a0923062d4dfd"
     }
   ]

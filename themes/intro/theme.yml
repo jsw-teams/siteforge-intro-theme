@@ -9,14 +9,12 @@ features:
   lightbox: false
   media: false
   comments: false
-  webMcp: true
-featureScripts:
-  webMcp: scripts/web-mcp.js
+  webMcp: false
+featureScripts: {}
 featureStyles:
   consent:
     - styles/consent.css
-featureCategories:
-  webMcp: necessary
+featureCategories: {}
 consent:
   enabled: true
   storageKey: js-gripe-consent
@@ -51,7 +49,9 @@ navigation:
     - key: privacy
 styles: []
 scripts:
-  head: []
+  head:
+    - src: scripts/web-mcp.js
+      defer: true
   bodyEnd:
     - src: scripts/site-icons.js
       consent: necessary

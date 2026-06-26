@@ -121,7 +121,7 @@ export const messages: Record<Lang, Messages> = {
         {
           heading: '怎么组织',
           points: [
-            'myblog 负责长文和订阅源，myweb 负责公开入口、人工维护的项目展示、联系渠道和必要政策页面。',
+            'myblog 负责长文和订阅源，siteforge-intro-theme 负责公开入口、人工维护的项目展示、联系渠道和必要政策页面。',
             '主题沿用 myblog 的像素边框、纸面底色和黑熊吉祥物，让主站像博客的控制台，而不是另一套站点。'
           ]
         },
@@ -289,7 +289,7 @@ export const messages: Record<Lang, Messages> = {
         {
           heading: '怎麼組織',
           points: [
-            'myblog 負責長文和訂閱源，myweb 負責公開入口、人工維護的專案展示、聯絡管道和必要政策頁面。',
+            'myblog 負責長文和訂閱源，siteforge-intro-theme 負責公開入口、人工維護的專案展示、聯絡管道和必要政策頁面。',
             '主題沿用 myblog 的像素邊框、紙面底色和黑熊吉祥物，讓主站像部落格的控制台，而不是另一套站點。'
           ]
         },
@@ -457,7 +457,7 @@ export const messages: Record<Lang, Messages> = {
         {
           heading: 'How it is organized',
           points: [
-            'myblog owns long-form writing and feeds; myweb owns the public entry, hand-maintained projects, contact channels, and policy pages.',
+            'myblog owns long-form writing and feeds; siteforge-intro-theme owns the public entry, hand-maintained projects, contact channels, and policy pages.',
             'The theme extends myblog with pixel borders, paper color, and the black bear mascot so the main site feels like the blog control surface.'
           ]
         },

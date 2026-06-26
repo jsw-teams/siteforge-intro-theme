@@ -4,7 +4,7 @@ Use this skill to find machine-readable resources published by JS.Gripe.
 
 ## Tool
 
-Call the WebMCP `list_discovery_resources` tool on `https://js.gripe/`.
+Call the WebMCP `list_discovery_resources` tool on `https://www.js.gripe/`.
 
 ## Output
 

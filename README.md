@@ -1,8 +1,8 @@
-# JS.Gripe / 技诉
+# Siteforge Intro Theme / JS.Gripe
 
-JS.Gripe 是基于 `myblog` 文件结构与 Siteforge 主题思路二次开发的导航型公开站点。这个仓库负责主站入口、页面内容、项目展示、联系方式、友情链接、隐私说明，以及从 myblog 文章索引加载的写作入口。
+Siteforge Intro Theme 是基于 `jsw-teams/siteforge` 二次开发的导航型主题项目，并作为 JS.Gripe 主站使用。这个仓库负责主站入口、页面内容、项目展示、联系方式、友情链接、隐私说明，以及从 myblog 文章索引加载的写作入口。
 
-当前主题为 `themes/intro`。`intro` 不是博客主题，而是导航入口主题：主题配置决定入口分组、页面 mascot、脚本、页脚与 consent；`src/` 只做路由和主题 API 不够表达的装配。
+当前项目名为 `siteforge-intro-theme`，主题目录为 `themes/intro`。`intro` 不是博客主题，而是导航入口主题：主题配置决定入口分组、页面 mascot、基础代理发现脚本、页脚与 consent；`src/` 只做路由和主题 API 不够表达的装配。
 
 ## 站务配置
 
@@ -82,6 +82,17 @@ footer:
       en: "© {year} JS.Gripe"
 ```
 
+## Agent Discovery
+
+站点公开基础代理发现能力，不依赖可选功能 JS 或 consent 才出现：
+
+- OAuth Protected Resource Metadata：`/.well-known/oauth-protected-resource`
+- Authorization Server Metadata：`/.well-known/oauth-authorization-server`
+- WebMCP：`themes/intro/scripts/web-mcp.js` 由主题 `scripts.head` 直接加载，并调用 `navigator.modelContext.provideContext()`
+- Agent skills：`/.well-known/agent-skills/index.json`
+
+`/.well-known/oauth-protected-resource` 使用 canonical resource `https://www.js.gripe/`，并声明 `authorization_servers` 与 `scopes_supported`。
+
 ## Sitemap 和 SEO 文件
 
 Sitemap 由 `@astrojs/sitemap` 生成。插件会先生成内部文件，`postbuild` 阶段会发布最终入口：
@@ -94,7 +105,7 @@ dist/sitemap.xml
 
 ## 部署到 Cloudflare Pages
 
-Cloudflare Pages 可以直接连接 `jsw-teams/myweb` 仓库。
+Cloudflare Pages 可以直接连接 `jsw-teams/siteforge-intro-theme` 仓库。
 
 推荐设置：
 

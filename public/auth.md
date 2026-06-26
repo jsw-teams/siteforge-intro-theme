@@ -55,4 +55,4 @@ Revocation endpoint: https://www.js.gripe/auth.md#revocation
 
 ## Contact
 
-Use the public repository for site-level issues: https://github.com/jsw-teams/myweb
+Use the public repository for site-level issues: https://github.com/jsw-teams/siteforge-intro-theme

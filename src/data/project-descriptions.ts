@@ -3,10 +3,10 @@ import type { Lang } from '../i18n/config';
 export type LocalizedProjectDescription = Record<Lang, string>;
 
 export const projectDescriptions: Record<string, LocalizedProjectDescription> = {
-  'jsw-teams/myweb': {
-    'zh-CN': 'JS.Gripe 主站：汇总站点入口、项目展示、写作索引、友情链接和联系信息。',
-    'zh-TW': 'JS.Gripe 主站：彙整站點入口、專案展示、寫作索引、友情連結和聯絡資訊。',
-    en: 'JS.Gripe main site for navigation, project listings, writing indexes, friends, and contact.'
+  'jsw-teams/siteforge-intro-theme': {
+    'zh-CN': '基于 Siteforge 二次开发的 Intro 导航主题，用于站点入口、项目展示、写作索引和联系页面。',
+    'zh-TW': '基於 Siteforge 二次開發的 Intro 導航主題，用於站點入口、專案展示、寫作索引和聯絡頁面。',
+    en: 'Intro navigation theme built on Siteforge for site entry points, project listings, writing indexes, and contact pages.'
   },
   'jsw-teams/myblog': {
     'zh-CN': 'JS.Gripe 博客：用于发布技术笔记、运维记录和多语言文章的静态博客。',
